@@ -1,1 +1,3 @@
-com/microservice/BookApplication.class
+com/microservice/book/BookApplication.class
+com/microservice/book/model/Person.class
+com/microservice/book/model/Book.class

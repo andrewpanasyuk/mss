@@ -1,1 +1,3 @@
-/home/andrew/Doc/my_app/demo-project/monolit/src/main/java/com/microservice/BookApplication.java
+/home/andrew/Doc/my_app/demo-project/book/src/main/java/com/microservice/book/BookApplication.java
+/home/andrew/Doc/my_app/demo-project/book/src/main/java/com/microservice/book/model/Book.java
+/home/andrew/Doc/my_app/demo-project/book/src/main/java/com/microservice/book/model/Person.java
