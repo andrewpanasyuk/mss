@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>monolit</module>
+        <module>statistic</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
