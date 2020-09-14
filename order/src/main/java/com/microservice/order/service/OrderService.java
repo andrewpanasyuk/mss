@@ -34,19 +34,19 @@ public class OrderService {
         }
     }
 
-    public Order createOrder(int bookId, int number, int customerId) {
+    public Order createOrder(int bookId, int number, int customerId, double price) {
         Order order = new Order();
-//        order.addItem(new OrderItem(bookRepository.findBookById(bookId), number));
+        order.addItem(new OrderItem(bookId, price, number));
         order.setOrderDate(LocalDateTime.now());
         order.setCustomer(customerRepository.findById(customerId));
 
         return order;
     }
 
-    public void addBook(int orderId, int bookId, int number) {
+    public void addBook(int orderId, int bookId, int number, double price) {
         Order order = orderRepository.findById(orderId);
         if (order != null) {
-//            order.addItem(new OrderItem(bookRepository.findBookById(bookId), number));
+            order.addItem(new OrderItem(bookId, price, number));
             orderRepository.save(order);
         }
     }

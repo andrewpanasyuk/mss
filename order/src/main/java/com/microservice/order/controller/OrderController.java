@@ -12,12 +12,12 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
-    public int createOrder(int bookId, int number, int customerId) {
-        return orderService.createOrder(bookId, number, customerId).getId();
+    public int createOrder(int bookId, int number, int customerId, double price) {
+        return orderService.createOrder(bookId, number, customerId, price).getId();
     }
 
-    public void addBook(int orderId, int bookId, int number) {
-        orderService.addBook(orderId, bookId, number);
+    public void addBook(int orderId, int bookId, int number, double price) {
+        orderService.addBook(orderId, bookId, number, price);
     }
 
     public void completeOrder(int orderId) {
