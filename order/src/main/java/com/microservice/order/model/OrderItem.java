@@ -1,4 +1,4 @@
-package com.microserice.order.model;
+package com.microservice.order.model;
 
 import lombok.Data;
 

@@ -11,6 +11,8 @@ import java.util.List;
 @RequestMapping("books")
 public class BookController {
 
+    private String libraryName = "IT-Discovery library";
+
     @Autowired
     private BookRepository bookRepository;
 
@@ -38,23 +40,4 @@ public class BookController {
         bookRepository.saveBook(book);
     }
 
-    public int createOrder(int bookId, int number, int customerId) {
-        return orderService.createOrder(bookId, number, customerId).getId();
-    }
-
-    public void addBook(int orderId, int bookId, int number) {
-        orderService.addBook(orderId, bookId, number);
-    }
-
-    public void completeOrder(int orderId) {
-        orderService.complete(orderId);
-    }
-
-    public void deliver(int orderId) {
-        orderService.deliver(orderId);
-    }
-
-    public void cancel(int orderId) {
-        orderService.cancel(orderId);
-    }
 }

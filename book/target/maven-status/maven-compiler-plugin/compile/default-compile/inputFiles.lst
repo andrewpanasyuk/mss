@@ -1,3 +1,6 @@
+/home/andrew/Doc/my_app/demo-project/book/src/main/java/com/microservice/book/controller/BookController.java
 /home/andrew/Doc/my_app/demo-project/book/src/main/java/com/microservice/book/BookApplication.java
 /home/andrew/Doc/my_app/demo-project/book/src/main/java/com/microservice/book/model/Book.java
 /home/andrew/Doc/my_app/demo-project/book/src/main/java/com/microservice/book/model/Person.java
+/home/andrew/Doc/my_app/demo-project/book/src/main/java/com/microservice/book/repository/InMemoryBookRepository.java
+/home/andrew/Doc/my_app/demo-project/book/src/main/java/com/microservice/book/repository/BookRepository.java

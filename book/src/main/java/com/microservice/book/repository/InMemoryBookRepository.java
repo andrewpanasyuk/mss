@@ -34,25 +34,25 @@ public class InMemoryBookRepository implements BookRepository {
         return new ArrayList<>(books.values());
     }
 
-    private void addHit(Book book) {
-        Hit hit = new Hit();
-        hit.setBrowser("Chrome");
-        try {
-            hit.setIp(InetAddress.getLocalHost().getHostName());
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
-        }
-        hit.setUserName(System.getProperty("user.name"));
-        hit.setViewed(LocalDateTime.now());
-        hit.setApplicationName(APP_NAME);
-        book.getHits().add(hit);
-    }
+//    private void addHit(Book book) {
+//        Hit hit = new Hit();
+//        hit.setBrowser("Chrome");
+//        try {
+//            hit.setIp(InetAddress.getLocalHost().getHostName());
+//        } catch (UnknownHostException e) {
+//            e.printStackTrace();
+//        }
+//        hit.setUserName(System.getProperty("user.name"));
+//        hit.setViewed(LocalDateTime.now());
+//        hit.setApplicationName(APP_NAME);
+//        book.getHits().add(hit);
+//    }
 
     @Override
     public Book findBookById(int id) {
         Book book = books.get(id);
         if (book != null) {
-            addHit(book);
+//            addHit(book);
         }
 
         return book;

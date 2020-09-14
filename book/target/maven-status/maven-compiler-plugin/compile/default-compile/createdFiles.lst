@@ -1,3 +1,6 @@
-com/microservice/book/BookApplication.class
+com/microservice/book/controller/BookController.class
+com/microservice/book/repository/InMemoryBookRepository.class
 com/microservice/book/model/Person.class
 com/microservice/book/model/Book.class
+com/microservice/book/BookApplication.class
+com/microservice/book/repository/BookRepository.class
