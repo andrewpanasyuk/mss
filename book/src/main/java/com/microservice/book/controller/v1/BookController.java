@@ -6,16 +6,21 @@ import com.microservice.book.controller.dto.v1.BookDTO;
 import com.microservice.book.model.Book;
 import com.microservice.book.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
+@RefreshScope
 @RequestMapping("books")
 public class BookController {
 
-    private String libraryName = "IT-Discovery library";
+//    @Value("${library.name:N/A}")
+    @Value("${text.greeting: N/A}")
+    private String libraryName ;
 
     private final Mapper dozerBeanMapper = DozerBeanMapperBuilder.create().build();
 
