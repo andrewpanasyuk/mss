@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+           uri: https://github.com/andrewpanasyuk/ms_config.git
+#          uri: https://github.com/o7planning/spring-cloud-config-git-repo-example.git
+#          search-paths: config
+
+#spring:
+#  profiles:
+#    active: native
+#  application:
+#    name: config-service
+#  cloud:
+#    zookeeper:
+#      discovery:
+#        enabled: true
+#        register: true
+#      connect-string: ${ZK_SERVICE_URI:localhost}:2181
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://${EUREKA_SERVICE_URI:localhost}:9000/eureka
