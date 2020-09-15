@@ -9,6 +9,16 @@ services:
       - "8080:8080"
     networks:
       - network1
+  book:
+    build:
+      context: book
+      dockerfile: book.dockerfile
+    ports:
+      - "8090:8080"
+    networks:
+      - network1
+    environment:
+      - CONFIG_SERVER_URI=config-server
  
 networks:
   network1:
