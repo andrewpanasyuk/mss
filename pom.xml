@@ -8,6 +8,7 @@
         <module>statistic</module>
         <module>order</module>
         <module>delivery</module>
+        <module>eureka-server</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -23,7 +24,20 @@
 
     <properties>
         <java.version>11</java.version>
+        <spring.cloud.starter.version>Greenwich.SR2</spring.cloud.starter.version>
     </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-parent</artifactId>
+                <version>${spring.cloud.starter.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
