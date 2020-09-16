@@ -14,11 +14,13 @@ services:
       context: book
       dockerfile: book.dockerfile
     ports:
-      - "8090:8080"
+      - "8090:8090"
     networks:
       - network1
     environment:
       - CONFIG_SERVER_URI=config-server
+    depends_on:
+      - config-server
  
 networks:
   network1:
