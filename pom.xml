@@ -5,9 +5,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>book</module>
-        <module>statistic</module>
-        <module>order</module>
-        <module>delivery</module>
+<!--        <module>statistic</module>-->
+<!--        <module>order</module>-->
+<!--        <module>delivery</module>-->
         <module>eureka-server</module>
     </modules>
     <parent>
