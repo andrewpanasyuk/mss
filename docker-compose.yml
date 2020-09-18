@@ -1,14 +1,15 @@
 version: '3.6'
 
 services:
-#  config-server:
-#    build:
-#      context: config-server
-#      dockerfile: server.dockerfile
-#    ports:
-#      - "8080:8080"
-#    networks:
-#      - network1
+  config-server:
+    build:
+      context: config-server
+      dockerfile: config.dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - network1
+
   eureka-server:
     build:
       context: eureka-server
@@ -17,6 +18,7 @@ services:
       - "9000:9000"
     networks:
       - network1
+
   book:
     build:
       context: book
@@ -25,12 +27,14 @@ services:
       - "8090:8090"
     networks:
       - network1
-    environment:
-#      - CONFIG_SERVER_URI=config-server
-      - EUREKA_SERVER_URI=eureka-server
     depends_on:
+      - config-server
       - eureka-server
- 
+    environment:
+      - CONFIG_SERVER_URI=config-server
+      - EUREKA_SERVER_URI=eureka-server
+
+
 networks:
   network1:
     driver: bridge
