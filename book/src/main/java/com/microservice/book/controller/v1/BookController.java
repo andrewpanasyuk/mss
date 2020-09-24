@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 @RequestMapping("books")
 public class BookController {
 
-    @Value("${library.name:N/A}")
+    @Value("${library.name}")
     private String libraryName ;
 
     private final Mapper dozerBeanMapper = DozerBeanMapperBuilder.create().build();
