@@ -40,6 +40,18 @@ services:
     links:
       - config-server
 
+  statistics:
+    build:
+      context: statistics
+      dockerfile: statistics.dockerfile
+    ports:
+      - "9010:9010"
+    networks:
+      - network1
+    environment:
+      - EUREKA_SERVER_URI=eureka-server
+    depends_on:
+      - zookeeper
 
 networks:
   network1:

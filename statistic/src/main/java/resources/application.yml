@@ -1,0 +1,18 @@
+server:
+  port: 9010
+spring:
+  application:
+    name: statistics
+#  zipkin:
+#    baseUrl: https://${ZIPKIN_SERVICE_URI:localhost}:9411
+#  cloud:
+#    zookeeper:
+#      discovery:
+#        enabled: true
+#        register: true
+#      connect-string: ${ZK_SERVICE_URI:localhost}:2181
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${EUREKA_SERVICE_URI:localhost}:9000/eureka
